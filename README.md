@@ -1,5 +1,7 @@
 # jira-kanban-shuffle
-Script to shuffle swimlanes on JIRA Kanban board
+A script which adds a shuffle button to randomize swimlanes on JIRA Kanban board
+
+![demo](https://github.com/dkrotx/jira-kanban-shuffle/assets/1651393/58809d78-e8ed-488c-a0df-7fd4db7e87b6)
 
 # A problem
 Usually during standup meetings you don't want people to report in the same order.
