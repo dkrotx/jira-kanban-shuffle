@@ -3,19 +3,19 @@ A script which adds a shuffle button to randomize swimlanes on JIRA Kanban board
 
 ![demo](https://github.com/dkrotx/jira-kanban-shuffle/assets/1651393/58809d78-e8ed-488c-a0df-7fd4db7e87b6)
 
-# A problem
-Usually during standup meetings you don't want people to report in the same order.
-At the same time, there is no feature that provides shuffle in vanilla JIRA setup. Nor the JQL function yet.
+# Problem
+Usually during standup meetings you don't want people to report in the same order every day as it makes it look more like report and less engaging.
+At the same time, there is no built-in Jira feature to leverage this.
 
 # Solution
-This TamperMonkey script solves this by:
-- looking for "Board" button
-- placing a new, "Shuffle" button next to it
-- when you click on it, the swimlanes are shuffled
+This TamperMonkey script solves this by slightly modifying page and moving the blocks which correspond to swimlanes. Specifially:
+- It looks for the "Board" button
+- Inserts a new, "Shuffle" button next to it
+- Shuffles swimlanes when the button is clicked
 
 # How to install?
-You may wonder - how to install if it is just a script?!
-You need [TamperMonkey plugin](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) for this. This Chrome extension allows you to run custom JS on sites/pages you specify.
+First, you to install [TamperMonkey plugin](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) for this.  
+This Chrome extension allows you to run custom JS on sites/pages you specify.
 
 1. Click on the extention, "create a new script"
 2. Add the content of shuffle.js as is
@@ -27,7 +27,7 @@ Just open your Kanban board, and you should see a new "Shuffle" button as on the
 
 ## Wait, isn't that dangerous?
 You right, installing a script from someone's github repo to Tampermonkey is, indeed, potentially dangerous.
-That's why the script is just a single, short and easy-to-read file.
+That's why the script is just a single, short and easy-to-read file.  
 You're free to go over and verify it only does shuffle and nothing else. I did the same with the original script.
 
 ## It doesn't work for me
